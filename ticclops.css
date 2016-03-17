@@ -1,0 +1,246 @@
+body {
+    background: #cfc6b5; /*#E6DCCA;*/
+    font-family: sans-serif;
+    font-size: 12px;
+}
+#container {
+	background: #880000; /*#cfbf9d;*/
+	border-radius: 12px;
+    -moz-border-radius: 12px; /* CSS3 for older Mozilla */
+    -webkit-border-radius: 12px; /* CSS3 for Safari */
+    padding-bottom: 2px;	
+}
+
+#status p {
+    text-align: center;
+    font-style: italic;
+    color: #434343;
+}
+
+#status .ready {
+    color: #880000; /*#2f7e35;*/
+    font-weight: bold;
+    font-size: 120%;
+}
+
+h2 {
+    font-size: 120%;
+    #color: #740000; /*#a6956f;*/
+    color: black;
+    text-decoration: small-caps;  
+    border-bottom:  1px solid #740000; /*#a6956f;*/
+}
+h3 {
+    margin-left: 5px;
+    font-size: 100%;
+    color: #740000; /*#a6956f;*/
+    #color: black;
+    text-decoration: small-caps;  
+    border-bottom:  1px solid #740000; /*#a6956f;*/
+}
+#header {
+	background: #880000; /*#cfbf9d;*/
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;    
+    margin-bottom:5px;
+}
+#header h1 {
+    color: white;
+}
+
+#header h2 {
+    color: white;
+    font-style: italic;
+    font-size: 100%;
+    margin: 1px;
+    border: none;
+}
+
+div.box {
+	border-radius: 12px;
+    -moz-border-radius: 12px; /* CSS3 for older Mozilla */
+    -webkit-border-radius: 12px; /* CSS3 for Safari */
+    background: #f6f6f6;
+}
+
+table.files, table#projects {
+    border: #ca9c4d;
+}
+
+table#projects td {
+    -moz-border-radius: 5px; /* CSS3 for Mozilla */
+    -webkit-border-radius: 5px; /* CSS3 for Safari */
+}
+
+body table.files td:hover, table.files th:hover, table#projects td:hover {
+    background: #eee;
+}
+
+table.files td {
+    -moz-border-radius: 5px; /* CSS3 for Mozilla */
+    -webkit-border-radius: 5px; /* CSS3 for Safari */
+}
+
+table.files thead th {
+    background: #cbcbcb; /*Balk boven inputfiles*/
+    -moz-border-radius: 5px; /* CSS3 for Mozilla */
+    -webkit-border-radius: 5px; /* CSS3 for Safari */
+}
+
+table.files td.actions {
+    background: #eee;
+    text-align: center;
+}
+
+.parameters table th, #parameters table  td {
+  border-bottom:  1px solid #e1e1e1;
+}
+
+.parameters h4 {
+    color: #580000; /* #ac864;*/
+    text-decoration: small-caps;  
+    border-bottom:  1px solid #D64F1A; /*#ca9c4d;*/
+}
+input.start {
+    font-weight: bold;
+    font-size: 160%;
+}
+
+input.uploadbutton {
+    font-weight: bold;
+}
+
+#status p {
+    text-align: center;
+    font-style: italic;
+    color: #434343;
+}
+
+#statuslog td.time {
+    font-size: 80%;
+    font-family: monospace;
+    color: gray;
+}
+#statuslog td.message {
+    font-style: italic;
+}
+
+#progressvalue {
+    background: gray;
+    color: white;
+}
+
+#tabs {
+	background: #cfc6b5; /*#E6DCCA;*/
+}
+
+
+#tabs li.active {
+	background: #880000; /*#cfbf9d;*/
+	color: white;
+	text-decoration: underline;
+	border:#880000 solid 1px; /*#cfbf9d;*/
+	font-size: 100%;
+}
+
+#tabs li.disabled {
+	background: #6d6450; /*#bfbfbf;*/
+	color: white;	
+	border: #6d6450 solid 1px; /*#bfbfbf;*/
+}
+
+#tabs li {
+	font-size: 90%;
+	border-top-left-radius: 12px;
+	border-top-right-radius: 12px;	
+	border: #B98883 solid 1px; /*#cbc3b1*/
+	background: #B98883; /*#cbc3b1;*/
+	color: white;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-weight: bold;
+	cursor: pointer;
+}
+#tabs a, #tabs a:visited {
+	color: white;
+	text-decoration: none;
+}
+#tabs a:hover {
+	color: #880000; /*#fffeb9;*/
+	text-decoration: none;
+}
+#status .error {
+	margin: 2px;
+	width: 70%; 
+}
+a {
+	color: #574b32;
+}
+a:visited {
+	color: #6d6450;
+}
+
+input.uploadbutton {
+	background: #880000;
+	padding: 7px;
+	color: white;
+	font-weight: normal;
+	font-size: 12px;
+}
+
+input.uploadbutton:hover {
+        background: #BC4100;
+}
+
+input#indexbutton, input#abortbutton, input#restartbutton, input#deletebutton {
+	background: #880000;
+	padding: 2px;
+	color: white;
+	font-weight: normal;
+	font-size: 11px;
+	width: 180px;
+	border: none;
+	cursor: pointer;
+}
+input#indexbutton:hover, input#abortbutton:hover, input#restartbutton:hover, input#deletebutton:hover {
+	background: #BC4100; /*#EE0000;*/	
+}
+
+div#startbutton input {
+	background: #880000;
+	padding: 14px;
+	color: white;
+	font-weight: bold;
+	font-size: 26px;
+}
+
+div#startbutton input:hover {
+	background: #BC4100;
+}
+/*Overrides settings for table backgrounds from table.css*/
+/* For the standard odd/even */
+tr.odd td.sorting_1 {
+	background-color: #c9bdaa; /*#e0d3bd;*/  /*#E1D1B4;*/
+}
+tr.even td.sorting_1 {
+	background-color: #cfc6b5; /*#E6DCCA;*/  /*#E1D1B4;*/
+}
+/*Overrides button settings from table.css*/
+.paging_full_numbers span.paginate_active {
+        background-color: #880000; /*#99B3FF;*/
+        color: white;
+}
+/*<style type="text/css">*/
+.centeredImage
+    {
+    text-align:center;
+    margin-top:0px;
+    margin-bottom:0px;
+    padding:0px;
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto;
+    /*background-color: transparent;*/
+    }
+/*</style>*/
