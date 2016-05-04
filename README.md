@@ -16,22 +16,22 @@ We have prepared TICCL for work in many languages, mainly on the basis of availa
 (http://ticclops.uvt.nl/TICCL.languagefiles.deu.20160421.tar.gz)  
 [German Fraktur]
 (http://ticclops.uvt.nl/TICCL.languagefiles.deu-frak.20160421.tar.gz)  
-http://ticclops.uvt.nl/TICCL.languagefiles.ell.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.eng.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.fin.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.fra.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.fry.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.grc.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.isl.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.ita.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.lat.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.nld.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.pol.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.por.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.ron.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.rus.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.spa.20160421.tar.gz
-http://ticclops.uvt.nl/TICCL.languagefiles.swe.20160421.tar.gz``
+[Greek (modern)] (http://ticclops.uvt.nl/TICCL.languagefiles.ell.20160421.tar.gz)  
+[English] (http://ticclops.uvt.nl/TICCL.languagefiles.eng.20160421.tar.gz)  
+[Finnish] (http://ticclops.uvt.nl/TICCL.languagefiles.fin.20160421.tar.gz)  
+[French] (http://ticclops.uvt.nl/TICCL.languagefiles.fra.20160421.tar.gz)  
+[Friesian] (http://ticclops.uvt.nl/TICCL.languagefiles.fry.20160421.tar.gz)  
+[Greek (antique)] (http://ticclops.uvt.nl/TICCL.languagefiles.grc.20160421.tar.gz)  
+[Icelandic] (http://ticclops.uvt.nl/TICCL.languagefiles.isl.20160421.tar.gz)  
+[Italian] (http://ticclops.uvt.nl/TICCL.languagefiles.ita.20160421.tar.gz)  
+[Latin] (http://ticclops.uvt.nl/TICCL.languagefiles.lat.20160421.tar.gz)  
+[Dutch] (http://ticclops.uvt.nl/TICCL.languagefiles.nld.20160421.tar.gz)  
+[Polish] (http://ticclops.uvt.nl/TICCL.languagefiles.pol.20160421.tar.gz)  
+[Portuguese] (http://ticclops.uvt.nl/TICCL.languagefiles.por.20160421.tar.gz)  
+[Romanian] (http://ticclops.uvt.nl/TICCL.languagefiles.ron.20160421.tar.gz)  
+[Russian] (http://ticclops.uvt.nl/TICCL.languagefiles.rus.20160421.tar.gz)  
+[Spanish] (http://ticclops.uvt.nl/TICCL.languagefiles.spa.20160421.tar.gz)  
+[Swedish] (http://ticclops.uvt.nl/TICCL.languagefiles.swe.20160421.tar.gz)  
 
 We also provide some sample corpora. These come with TICCLops for demonstration and test purposes. These are available here:  
 
@@ -41,11 +41,11 @@ We also provide some sample corpora. These come with TICCLops for demonstration 
 (http://ticclops.uvt.nl/TICCL.SampleCorpora.DJVU.20160504.tar.gz)  
 [FoLiA XML format]
 (http://ticclops.uvt.nl/TICCL.SampleCorpora.FOLIA.20160504.tar.gz)  
-http://ticclops.uvt.nl/TICCL.SampleCorpora.OCR.20160504.tar.gz
-http://ticclops.uvt.nl/TICCL.SampleCorpora.PDF.20160504.tar.gz
-http://ticclops.uvt.nl/TICCL.SampleCorpora.TIFF.20160504.tar.gz
-http://ticclops.uvt.nl/TICCL.SampleCorpora.TSV.20160504.tar.gz
-http://ticclops.uvt.nl/TICCL.SampleCorpora.TXT.20160504.tar.gz``
+[OCR] (http://ticclops.uvt.nl/TICCL.SampleCorpora.OCR.20160504.tar.gz)  
+[PDF with embedded page images] (http://ticclops.uvt.nl/TICCL.SampleCorpora.PDF.20160504.tar.gz)  
+[TIFF image files] (http://ticclops.uvt.nl/TICCL.SampleCorpora.TIFF.20160504.tar.gz)  
+[Tab-Separated list] (http://ticclops.uvt.nl/TICCL.SampleCorpora.TSV.20160504.tar.gz)  
+[Text files] (http://ticclops.uvt.nl/TICCL.SampleCorpora.TXT.20160504.tar.gz)  
 
 ## Running TICCL from the command line  ##
 
