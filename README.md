@@ -6,7 +6,9 @@ TICCLops is TICCL as an 'online processing system'. It is a fully fledged web ap
 
 The current repository mainly houses the wrapper scripts, variably Perl and Python scripts.  
 
-The main TICCL modules were developed by Ko van der Sloot in C++ in various projects over the past years. These are available from: ``https://github.com/LanguageMachines/ticcltools``  
+The main TICCL modules were developed by Ko van der Sloot in C++ in
+various projects over the past years. These are available from:
+[TICCLtools at LanguageMachines] (https://github.com/LanguageMachines/ticcltools)  
 
 We have prepared TICCL for work in many languages, mainly on the basis of available open source lexicons due to Aspell. The language specific files are available here:  
 
