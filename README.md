@@ -41,3 +41,18 @@ http://ticclops.uvt.nl/TICCL.SampleCorpora.TIFF.20160504.tar.gz
 http://ticclops.uvt.nl/TICCL.SampleCorpora.TSV.20160504.tar.gz
 http://ticclops.uvt.nl/TICCL.SampleCorpora.TXT.20160504.tar.gz
 
+## Running TICCL from the command line  ##
+
+Use TICCLops.PICCL.pl to run TICCL from the command line.  
+
+Examples of input parameters with some further documentation are to be found in file: TICCL.Black.config .
+
+Edit file TICCL.Template.config in order to specify the specific settings and file locations for your own installation.
+
+Running script TICCL.BuildCommandLine.sh (edit to specifiy your own filled out config-file!) will print the command line required to run TICCL to file: RunTICCL.commandline.sh .
+
+You can then start TICCL by running the following command: $ ./RunTICCL.commandline.sh 
+
+
+
+
