@@ -10,9 +10,12 @@ The main TICCL modules were developed by Ko van der Sloot in C++ in various proj
 
 We have prepared TICCL for work in many languages, mainly on the basis of available open source lexicons due to Aspell. The language specific files are available here:  
 
-[All languages] (http://ticclops.uvt.nl/TICCL.languagefiles.ALLavailable.20160421.tar.gz)
-[German] (http://ticclops.uvt.nl/TICCL.languagefiles.deu.20160421.tar.gz)
-http://ticclops.uvt.nl/TICCL.languagefiles.deu-frak.20160421.tar.gz
+[All languages]
+(http://ticclops.uvt.nl/TICCL.languagefiles.ALLavailable.20160421.tar.gz)  
+[German]
+(http://ticclops.uvt.nl/TICCL.languagefiles.deu.20160421.tar.gz)  
+[German Fraktur]
+(http://ticclops.uvt.nl/TICCL.languagefiles.deu-frak.20160421.tar.gz)  
 http://ticclops.uvt.nl/TICCL.languagefiles.ell.20160421.tar.gz
 http://ticclops.uvt.nl/TICCL.languagefiles.eng.20160421.tar.gz
 http://ticclops.uvt.nl/TICCL.languagefiles.fin.20160421.tar.gz
@@ -32,9 +35,12 @@ http://ticclops.uvt.nl/TICCL.languagefiles.swe.20160421.tar.gz``
 
 We also provide some sample corpora. These come with TICCLops for demonstration and test purposes. These are available here:  
 
-[All demo and test sets] (http://ticclops.uvt.nl/TICCL.SampleCorpora.20160504.ALL.tar.gz)
-[DjVu format] (http://ticclops.uvt.nl/TICCL.SampleCorpora.DJVU.20160504.tar.gz)
-http://ticclops.uvt.nl/TICCL.SampleCorpora.FOLIA.20160504.tar.gz
+[All demo and test sets]
+(http://ticclops.uvt.nl/TICCL.SampleCorpora.20160504.ALL.tar.gz)  
+[DjVu format]
+(http://ticclops.uvt.nl/TICCL.SampleCorpora.DJVU.20160504.tar.gz)  
+[FoLiA XML format]
+(http://ticclops.uvt.nl/TICCL.SampleCorpora.FOLIA.20160504.tar.gz)  
 http://ticclops.uvt.nl/TICCL.SampleCorpora.OCR.20160504.tar.gz
 http://ticclops.uvt.nl/TICCL.SampleCorpora.PDF.20160504.tar.gz
 http://ticclops.uvt.nl/TICCL.SampleCorpora.TIFF.20160504.tar.gz
