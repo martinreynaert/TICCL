@@ -36,6 +36,46 @@ use File::Find;
 use Sort::Naturally;
 use Getopt::Std;
 
+if ($ARGV[0] =~ /config$/){
+
+open (C, $ARGV[0]);
+while ($conf = <C>) {
+  chomp $conf;
+  $conf =~ s/\s+/ /g;
+  if ($conf =~ /^\-/){
+    @CONF = split ' ', $conf;
+    push @CUMUL, $CONF[1];
+  }
+}
+close C;
+
+print STDERR "TICCL_OPTSin: @CUMUL\n";
+
+$mode = @CUMUL[0];
+$ROOTDIR = @CUMUL[1];
+$charconfus = @CUMUL[2];
+$KHC = @CUMUL[3];
+$ext = @CUMUL[4] . '$';
+$artifrq = @CUMUL[5];
+$alph = @CUMUL[6];
+$OCR = @CUMUL[7];
+$INPUTDIR = @CUMUL[8];
+$lex = @CUMUL[9];
+$LD = @CUMUL[10];
+$OUTPUTDIR = @CUMUL[11];
+$prefix = @CUMUL[12];
+$rank = @CUMUL[13];
+$lang = @CUMUL[14];
+$tooldir = @CUMUL[15];
+$threads = @CUMUL[16];
+$minlength = @CUMUL[17];
+$maxlength = @CUMUL[18];
+
+print STDERR "TICCL_OPTSin2: MODE: $mode ROOTDIR: $ROOTDIR CHARCONFUS: $charconfus KHC: $KHC EXT: $ext ARTIFRQ: $artifrq ALPH: $alph OCR: $OCR INPUTDIR: $INPUTDIR DIR: $dir LEX: $lex LD: $LD OUTPUTDIR: $OUTPUTDIR PREFIX: $prefix RANK: $rank LANG: $lang TOOLDIR: $tooldir THREADS: $threads MINLENGTH: $minlength MAXLENGTH: $maxlength \n";
+
+@CUMUL = ();
+}
+else {
 # OPTIONS
 getopts('a:b:c:d:e:f:g:h:i:j:l:L:o:p:r:t:u:v:x:y:z:');
 
@@ -64,6 +104,7 @@ $minlength = $opt_x;
 $maxlength = $opt_y;
 
 $LD = 2;
+}
 
 print STDERR "OUT1: $out\n";
 $out = $OUTPUTDIR . '/zzz/TICCL/' . $prefix;
