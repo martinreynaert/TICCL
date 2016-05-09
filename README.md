@@ -3,7 +3,8 @@
 Text-induced Corpus Clean-up is the stand-alone command line version of the spelling correction and OCR post-correction system we have been developing since about 2008.  
 
 TICCLops is TICCL as an 'online processing system'. It is a fully
-fledged web application and web service due to [CLAM] (http://proycon.github.io/clam/), developed  by Maarten van Gompel.  
+fledged web application and web service due to [CLAM]
+(http://proycon.github.io/clam/), developed  by Maarten van Gompel.
 
 The current repository mainly houses the wrapper scripts, variably Perl and Python scripts.  
 
@@ -63,11 +64,20 @@ Examples of input parameters with some further documentation are to be found in 
 
 Edit file ``TICCL.Template.config`` in order to specify the specific settings and file locations for your own installation.
 
-Running script ``TICCL.BuildCommandLine.sh`` (edit to specify your own filled out config-file!) will print the command line required to run TICCL to file: ``RunTICCL.commandline.sh`` .
-
 You can then start TICCL by running the following command: ``$
-./RunTICCL.commandline.sh``  
+perl TICCLops.PICCL.pl TICCL.Template.config``  
 
+## TICCLops available online as demonstrator system ##
 
+We have a demonstrator system online in an official Dutch CLARIN Center at
+[TICCLopsCLAM] (http://ticclops.clarin.inl.nl/ticclops/). An interface
+developed specifically for philosopher-users is available here:
+[TICCLopsPhilosTEI] (http://ticclops.clarin.inl.nl/ticclops/).
 
-
+In fact, both systems are geared at letting you upload scanned images of
+book pages, to have them automatically converted into electronic text
+by way of the Tesseract OCR engine and then to have them
+OCR post-corrected by TICCL. For e.g. PDF files for book chapters, you
+will receive back a full, reconstituted book in both FoLiA and TEI
+formats. Please take into account that this process requires, well,
+the time required.
