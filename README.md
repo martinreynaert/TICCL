@@ -67,12 +67,75 @@ Edit file ``TICCL.Template.config`` in order to specify the specific settings an
 You can then start TICCL by running the following command: ``$
 perl TICCLops.PICCL.pl TICCL.Template.config``  
 
+## Running TICCL from the command line  -- specific parameter settings##
+
+The first parameter set in TICCL's config file, or the first parameter
+i.e. ARGV[0] when all parameters are specified on the command line, is
+typically a combination of alphabetical characters that when set,
+activate particular TICCL C++ modules.  
+
+As default we have: ``abcmdef``. This means all of TICCL's C++ modules will be
+run sequentially, but two of them will be run in 'word focus
+mode'. This refers to our main TICCL publication (Reynaert 2010). In
+its essence, this is the cheapest option to run TICCL if the corpus
+you want to have (OCR post-)corrected is not very big.  
+
+We next describe we each letter invokes.  
+
+### Parameter setting ``a`` ###
+
+The letter ``a`` in fact works in tandem with line 8 in the config
+file, parameter ``-h`` on the full command line. The character ``a``
+specifies that your input will be running text. This running text may
+be in three formats, either FoLiA XML, else some unspecified XML
+format or finally plain text format. For FoLiA XML, specify ``FOLIA``
+in line 8, for unspecified XML put ``XML``, for plain text put
+``TXT``.  
+
+For unspecified XML, the text will be extracted from the ``<t>`` nodes
+in the XML.  
+
+In fact, the module invoked will derive a frequency list for your
+corpus from your input files. This entails that in case you already
+have a frequency file, or even in case that you only have a frequency
+file for your corpus (which might be the case if you acquired OCRed
+books from the Hathi Trust collection, for instance), you can skip
+this step and proceed from the next.  
+
+### Parameter setting ``b`` ###
+
+The letter ``b`` envokes the module TICCL-unk. This performs an
+elementary clean-up of the input frequency list. In fact, this removes
+character strings that have no hope of ever being corrected into what
+is commonly understood to be a meaningful word in any natural
+language.  
+
+### Parameter setting ``c`` ###
+
+The letter ``c`` invokes C++ module TICCL-anahash. This converts the
+cleaned frequency file into the TICCL anagram hash. Can be used in
+conjunction with the letter ``m`` (please, see there) to provide a speedier further
+processing for smaller corpora.  
+
+### Parameter setting ``m`` ###
+
+If specified, the letter ``m`` makes the module TICCL-anahash also
+output the list of word strings that TICCL needs to search correction
+candidates for. This is effected on the basis of the artificial
+frequency we let the system assign to word types that are present in
+the validated lexicon.  This list serves as the focus words list for
+the subsequent module TICCL-indexerNT. For smaller corpora this
+results in less work and therefore shorter running times than when one
+runs TICCL-indexer, which exhaustively gathers all correction
+candidates for all the words in the cleaned up corpus frequency list,
+i.e. performs character confusion based corpus clean-up.  
+
 ## TICCLops available online as demonstrator system ##
 
 We have a demonstrator system online in an official Dutch CLARIN Center at
 [TICCLopsCLAM] (http://ticclops.clarin.inl.nl/ticclops/). An interface
 developed specifically for philosopher-users is available here:
-[TICCLopsPhilosTEI] (http://ticclops.clarin.inl.nl/ticclops/).
+[TICCLopsPhilosTEI] (http://ticclops.clarin.inl.nl/ticclops/).  
 
 In fact, both systems are geared at letting you upload scanned images of
 book pages, to have them automatically converted into electronic text
@@ -80,4 +143,4 @@ by way of the Tesseract OCR engine and then to have them
 OCR post-corrected by TICCL. For e.g. PDF files for book chapters, you
 will receive back a full, reconstituted book in both FoLiA and TEI
 formats. Please take into account that this process requires, well,
-the time required.
+the time required.  
