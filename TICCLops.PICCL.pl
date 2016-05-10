@@ -1,9 +1,9 @@
 #!/usr/bin/perl
-## Copyright Martin Reynaert 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015
-## MRE 2015-02-23
-## TICCLops / @PhilosTEI system version 0.2
+## Copyright Martin Reynaert 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016
+## MRE 2016-05-01
+## TICCLops / @PhilosTEI / PICCL system version 0.3
 
-##This Perl wrapper is the result of CLARIN-NL Call 4 project 12-006 @PhilosTEI coordinated by Prof. Dr. Arianna Betti at UvA, Amsterdam, The Netherlands.
+##This Perl wrapper is in part the result of CLARIN-NL Call 4 project 12-006 @PhilosTEI coordinated by Prof. Dr. Arianna Betti at UvA, Amsterdam, The Netherlands.
 
 ##This Perl wrapper is part of the interface between the CLAM web application/service that puts TICCLops and the @PhilosTEI system online. Both are hosted at INL in Leiden and are part of the CLARIN Infrastructure. TICCLops is a fully automatic OCR post-correction system. The @PhilosTEI system extends TICCLops with a range of possibilities for turning digital text images into FoLiA xml formatted digital text. It further provides output in TEI xml format.
 
@@ -52,13 +52,14 @@ close C;
 print STDERR "TICCL_OPTSin: @CUMUL\n";
 
 $mode = @CUMUL[0];
-$ROOTDIR = @CUMUL[1];
-$charconfus = @CUMUL[2];
-$KHC = @CUMUL[3];
-$ext = @CUMUL[4] . '$';
-$artifrq = @CUMUL[5];
-$alph = @CUMUL[6];
-$OCR = @CUMUL[7];
+$texttype  = @CUMUL[1];
+$ROOTDIR = @CUMUL[2];
+$charconfus = @CUMUL[3];
+$KHC = @CUMUL[4];
+$ext = @CUMUL[5] . '$';
+$artifrq = @CUMUL[6];
+$alph = @CUMUL[7];
+#$OCR = @CUMUL[7];
 $INPUTDIR = @CUMUL[8];
 $lex = @CUMUL[9];
 $LD = @CUMUL[10];
@@ -71,25 +72,25 @@ $threads = @CUMUL[16];
 $minlength = @CUMUL[17];
 $maxlength = @CUMUL[18];
 
-print STDERR "TICCL_OPTSin2: MODE: $mode ROOTDIR: $ROOTDIR CHARCONFUS: $charconfus KHC: $KHC EXT: $ext ARTIFRQ: $artifrq ALPH: $alph OCR: $OCR INPUTDIR: $INPUTDIR DIR: $dir LEX: $lex LD: $LD OUTPUTDIR: $OUTPUTDIR PREFIX: $prefix RANK: $rank LANG: $lang TOOLDIR: $tooldir THREADS: $threads MINLENGTH: $minlength MAXLENGTH: $maxlength \n";
+print STDERR "TICCL_OPTSin2: MODE: $mode TEXTTYPE: $texttype ROOTDIR: $ROOTDIR CHARCONFUS: $charconfus KHC: $KHC EXT: $ext ARTIFRQ: $artifrq ALPH: $alph INPUTDIR: $INPUTDIR DIR: $dir LEX: $lex LD: $LD OUTPUTDIR: $OUTPUTDIR PREFIX: $prefix RANK: $rank LANG: $lang TOOLDIR: $tooldir THREADS: $threads MINLENGTH: $minlength MAXLENGTH: $maxlength \n";
 
 @CUMUL = ();
 }
 else {
 # OPTIONS
-getopts('a:b:c:d:e:f:g:h:i:j:l:L:o:p:r:t:u:v:x:y:z:');
+getopts('a:b:c:d:e:f:g:i:j:l:L:o:p:r:t:u:v:x:y:z:');
 
-print STDERR "TICCL_OPTS: a: $opt_a b: $opt_b c: $opt_c d: $opt_d e: $opt_e f: $opt_f g: $opt_g h: $opt_h i: $opt_i j: $opt_j l: $opt_l L: $opt_L o: $opt_o p: $opt_p r: $opt_r t: $opt_t u: $opt_u v: $opt_v x: $opt_x y: $opt_y z: $opt_z\n";
+print STDERR "TICCL_OPTS: a: $opt_a b: $opt_b c: $opt_c d: $opt_d e: $opt_e f: $opt_f g: $opt_g i: $opt_i j: $opt_j l: $opt_l L: $opt_L o: $opt_o p: $opt_p r: $opt_r t: $opt_t u: $opt_u v: $opt_v x: $opt_x y: $opt_y z: $opt_z\n";
 
 $mode = $opt_a;
-#$LD = $opt_b;
+$texttype = $opt_b;
 $ROOTDIR = $opt_z;
 $charconfus = $opt_c;
 $KHC = $opt_d;
 $ext = $opt_e . '$';
 $artifrq = $opt_f;
 $alph = $opt_g;
-$OCR = $opt_h;
+#$OCR = $opt_h;
 $INPUTDIR = $opt_i;
 $dir = $opt_i;
 $lex = $opt_l;
@@ -153,7 +154,7 @@ print STDERR "TICCLops version CLARIN-NL 0.2\n";
 #print STDERR "TOOLDIR: $tooldir\n";
 
 @coldocs = ();
-if ($OCR =~ /PDF/){
+if ($texttype =~ /PDF/){
 find( sub{
     -f $_ and push @documents, $File::Find::name;
     -d $_ and push @dirs,  $File::Find::name;
@@ -185,7 +186,7 @@ print STDERR "Running_pdfimages: $doc >> $last PREFIX: $prefix\n";
 
 ##NEW: Image conversion generic to tiff--BEGIN
 @coldocs = ();
-if (($OCR =~ /IM/) or ($OCR =~ /PDF/)) {
+if (($texttype =~ /IM/) or ($texttype =~ /PDF/)) {
 find( sub{
     -f $_ and push @documents, $File::Find::name;
     -d $_ and push @dirs,  $File::Find::name;
@@ -221,7 +222,7 @@ print STDERR "RUN_Convert: $doc >> $last\n";
 ##NEW: Image conversion generic to tiff--END
 
 @coldocs = ();
-if ($OCR =~ /DJVU/){
+if ($texttype =~ /DJVU/){
 find( sub{
     -f $_ and push @documents, $File::Find::name;
     -d $_ and push @dirs,  $File::Find::name;
@@ -257,8 +258,8 @@ print STDERR "ALLTIFFS: $tiffdir/$prefix.tif DOCNR: $docnr\n";
 $alldocs = ();
 
 @coldocs = ();
-if (($OCR =~ /IM/) or ($OCR =~ /TIFF/) or ($OCR =~ /PDF/) or ($OCR =~ /DJVU/)) {
-    if (($OCR =~ /IM/) or ($OCR =~ /PDF/) or ($OCR =~ /DJVU/)) {
+if (($texttype =~ /IM/) or ($texttype =~ /TIFF/) or ($texttype =~ /PDF/) or ($texttype =~ /DJVU/)) {
+    if (($texttype =~ /IM/) or ($texttype =~ /PDF/) or ($texttype =~ /DJVU/)) {
 	$DOCDIR = $tiffdir;
     }
     else {
@@ -311,7 +312,7 @@ print STDERR "RUN_tiffcp: ALLDOCS: $alldocs OUT: $tiffdir/$prefix.tif\n";
 }
 
 @coldocs = ();
-if ($OCR =~ /TXT/){
+if ($texttype =~ /TXT/){
 find( sub{
     -f $_ and push @documents, $File::Find::name;
     -d $_ and push @dirs,  $File::Find::name;
@@ -344,18 +345,18 @@ if ($mode =~ /l/){
 
 ###LOOP - Corpus Processing into frequency file--BEGIN###
 if ($mode =~ /a/){
-    if (($OCR =~ /IM/) or ($OCR =~ /PDF/) or ($OCR =~ /DJVU/) or ($OCR =~ /TIFF/)){
+    if (($texttype =~ /IM/) or ($texttype =~ /PDF/) or ($texttype =~ /DJVU/) or ($texttype =~ /TIFF/)){
 print STDERR "RUN_FoLiA-stats1: $out\n"; 
 `$tooldir/FoLiA-stats -R -s -t $threads -e $ext --lang=none --ngram 1 -o $out $foliadir`;
 
 ##/exp/sloot/usr/local/bin/FoLiA-stats -R -s -t 4 -e folia.xml$ --lang=none --ngram 1 -o /opensonar/ticclops/ticclops /opensonar/ticclops/nld/projects/anonymous/tiftest/output/zzz/FOLIA
 }
-        elsif ($OCR =~ /FOLIA/){
+        elsif ($texttype =~ /FOLIA/){
 ##--class=FoLiA-txt
 print STDERR "RUN_FoLiA-stats1FOLIA: $out\n"; 
 	`$tooldir/FoLiA-stats -R -s -t $threads -e $ext --lang=none --class=FoLiA-txt --ngram 1 -o $out $foliadir`;
 }
-        elsif ($OCR =~ /XML/){
+        elsif ($texttype =~ /XML/){
 	  ##--class=FoLiA-txt
 
 	 # Usage: /exp/sloot/usr/local/bin//TICCL-stats [options] file/dir
@@ -378,7 +379,7 @@ print STDERR "RUN_FoLiA-stats1FOLIA: $out\n";
 print STDERR "RUN_FoLiA-stats1XML: $out\n"; 
 	`$tooldir/TICCL-stats -R -X -t $threads -e $ext -o $out $INPUTDIR`;
     }
-        elsif ($OCR =~ /TXT/){
+        elsif ($texttype =~ /TXT/){
 ##--class=FoLiA-txt
 print STDERR "RUN_FoLiA-stats1TXT: $out\n"; 
 	`$tooldir/TICCL-stats -R -t $threads -e $ext -o $out $INPUTDIR`;
@@ -526,7 +527,7 @@ if ($mode =~ /g/){
 ##new, streamlined:
 print STDERR "RUN_FoLiA-correct: $out\n";
 ##Met FoLiA input nu geen folia.xml in outputdir, maar wel in inputdir
-if ($OCR =~ /FOLIA/){
+if ($texttype =~ /FOLIA/){
 `$tooldir/FoLiA-correct -t $threads --nums 10 -e $ext -O $dirticclcorrect --unk $out.tsv.unk --punct $out.tsv.punct --rank $out.tsv.clean.ldcalc.ranked $INPUTDIR`;
 }
 else {

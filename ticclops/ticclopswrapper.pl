@@ -12,7 +12,7 @@
 use Getopt::Std;
 
 # OPTIONS
-getopts('L:f:x:y:r:t:h:');
+getopts('L:f:x:y:r:t:b:');
 
 $ROOTDIR = $ARGV[0];
 $INPUTDIR = $ARGV[1];
@@ -30,9 +30,9 @@ $lang = $opt_t;
 $opt_f = 1000000000;
 $opt_p = 'TICCLopsOutput';
 
-if (($opt_h =~ /IM/) or ($opt_h =~ /TXT/) or ($opt_h =~ /PDF/) or ($opt_h =~ /DJVU/) or ($opt_h =~ /FOLIA/)){                                    $ARGUMENTS = '-a abcdefgm' . ' -b ' . $opt_L . ' -c ' . $ROOTDIR . "/data/int/$lang/$lang*confusion" . ' -e folia.xml' . ' -f ' . $opt_f . ' -g ' . $ROOTDIR . "/data/int/$lang/$lang*chars" . ' -h ' . $opt_h . ' -i ' . $INPUTDIR . ' -j ' . $PROJECT . ' -l ' . $lexicon . ' -L ' . $opt_L . ' -o ' . $OUTPUTDIR . ' -p ' .  $opt_p . ' -r ' . $opt_r . ' -t ' . $opt_t . ' -u /exp/sloot/usr/local/bin/' . ' -v 6' . ' -x ' .  $opt_x . ' -y ' . $opt_y . ' -z ' . $ROOTDIR;
+if (($opt_b =~ /IM/) or ($opt_b =~ /TXT/) or ($opt_b =~ /PDF/) or ($opt_b =~ /DJVU/) or ($opt_b =~ /FOLIA/)){                                    $ARGUMENTS = '-a abcdefgm' . ' -b ' . $opt_L . ' -c ' . $ROOTDIR . "/data/int/$lang/$lang*confusion" . ' -e folia.xml' . ' -f ' . $opt_f . ' -g ' . $ROOTDIR . "/data/int/$lang/$lang*chars" . ' -i ' . $INPUTDIR . ' -j ' . $PROJECT . ' -l ' . $lexicon . ' -L ' . $opt_L . ' -o ' . $OUTPUTDIR . ' -p ' .  $opt_p . ' -r ' . $opt_r . ' -t ' . $opt_t . ' -u /exp/sloot/usr/local/bin/' . ' -v 6' . ' -x ' .  $opt_x . ' -y ' . $opt_y . ' -z ' . $ROOTDIR;
 }                                                                              
-elsif ($opt_h =~ /FRQ/){                                                        $ARGUMENTS = '-a bcdefm' . ' -b' . $opt_L . ' -c' . $ROOTDIR . "/data/int/$lang/$lang*confusion" . ' -e folia.xml' . ' -f' . $opt_f . ' -g' . $ROOTDIR . "/data/int/$lang/$lang*chars" . ' -h ' . $opt_h . ' -i' . $INPUTDIR . ' -j ' . $PROJECT . ' -l' . $lexicon . ' -L' . $opt_L . ' -o' . $OUTPUTDIR . ' -p' .  $opt_p . ' -r' . $opt_r . ' -t' . $opt_t . ' -u /exp/sloot/usr/local/bin/' . ' -v 6' . ' -x' .  $opt_x . ' -y' . $opt_y . ' -z ' . $ROOTDIR;
+elsif ($opt_b =~ /TSV/){                                                        $ARGUMENTS = '-a bcdefm' . ' -b' . $opt_b . ' -c' . $ROOTDIR . "/data/int/$lang/$lang*confusion" . ' -e folia.xml' . ' -f' . $opt_f . ' -g' . $ROOTDIR . "/data/int/$lang/$lang*chars" . ' -i' . $INPUTDIR . ' -j ' . $PROJECT . ' -l' . $lexicon . ' -L' . $opt_L . ' -o' . $OUTPUTDIR . ' -p' .  $opt_p . ' -r' . $opt_r . ' -t' . $opt_t . ' -u /exp/sloot/usr/local/bin/' . ' -v 6' . ' -x' .  $opt_x . ' -y' . $opt_y . ' -z ' . $ROOTDIR;
 }    
 else {
 ##Nothing happens..

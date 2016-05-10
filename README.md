@@ -84,12 +84,12 @@ We next describe what each letter invokes.
 
 ### Parameter setting ``a`` ###
 
-The letter ``a`` in fact works in tandem with line 8 in the config
-file, parameter ``-h`` on the full command line. The character ``a``
+The letter ``a`` in fact works in tandem with line 2 in the config
+file, parameter ``-b`` on the full command line. The character ``a``
 specifies that your input will be running text. This running text may
 be in three formats, either FoLiA XML, else some unspecified XML
 format or finally plain text format. For FoLiA XML, specify ``FOLIA``
-in line 8, for unspecified XML put ``XML``, for plain text put
+in line 2, for unspecified XML put ``XML``, for plain text put
 ``TXT``.  
 
 For unspecified XML, the text will be extracted from the ``<t>`` nodes

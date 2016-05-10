@@ -2071,7 +2071,7 @@ PARAMETERS = [
         ChoiceParameter('lang','Language?','Which language do you want to work with?', choices=[('eng','English'),('nld','Dutch'),('fin','Finnish'),('fra','French'),('deu','German'),('deu-frak','German Fraktur'),('ell','Greek (Modern)'),('grc','Greek (Classical)'),('isl','Icelandic'),('ita','Italian'),('lat','Latin'),('pol','Polish'),('por','Portuguese'),('rus','Russian'),('spa','Spanish'),('swe','Swedish')], nospace=True,paramflag='-t')
     ]),
     ('Input Selection', [
-        ChoiceParameter('input','Input Type?','Which input types do you have?', choices=[('TXT','Plain texts'),('FOLIA','Texts in FoLiA xml format'),('TIFF','Images in TIFF format'),('IM','Images in non-TIFF format'),('FRQ','Frequency List'),('PDF','Images in PDF format'),('DJVU','Images in DJVU format')], nospace=True,paramflag='-h')
+        ChoiceParameter('input','Input Type?','Which input types do you have?', choices=[('TXT','Plain texts'),('FOLIA','Texts in FoLiA xml format'),('TIFF','Images in TIFF format'),('IM','Images in non-TIFF format'),('TSV','Tab-separated Frequency List'),('PDF','Images in PDF format'),('DJVU','Images in DJVU format')], nospace=True,paramflag='-b')
     ]),
     ('N-best Ranking', [
             ChoiceParameter('top','How many ranked variants?','Return N best-first ranked variants',choices=[('3','Up to three N-best ranked'),('1','First-best Only'),('2','Up to two N-best ranked'),('5','Up to five N-best ranked'),('10','Up to ten N-best ranked'),('20','Up to twenty N-best ranked')], nospace=True,paramflag='-r')
