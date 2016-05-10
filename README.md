@@ -80,7 +80,7 @@ mode'. This refers to our main TICCL publication (Reynaert 2010). In
 its essence, this is the cheapest option to run TICCL if the corpus
 you want to have (OCR post-)corrected is not very big.  
 
-We next describe we each letter invokes.  
+We next describe what each letter invokes.  
 
 ### Parameter setting ``a`` ###
 
@@ -95,6 +95,12 @@ in line 8, for unspecified XML put ``XML``, for plain text put
 For unspecified XML, the text will be extracted from the ``<t>`` nodes
 in the XML.  
 
+For FoLiA XML, the C++ ticcltools module ``FoLiA-stats`` is invoked. In fact, this
+module can also provide n-gram lists.
+
+For plain XML or TXT the C++ ticcltools module ``TICCL-stats`` is
+invoked. This is to data less well developed than the FoLiA module.
+
 In fact, the module invoked will derive a frequency list for your
 corpus from your input files. This entails that in case you already
 have a frequency file, or even in case that you only have a frequency
@@ -104,7 +110,7 @@ this step and proceed from the next.
 
 ### Parameter setting ``b`` ###
 
-The letter ``b`` envokes the module TICCL-unk. This performs an
+The letter ``b`` envokes the module ``TICCL-unk``. This performs an
 elementary clean-up of the input frequency list. In fact, this removes
 character strings that have no hope of ever being corrected into what
 is commonly understood to be a meaningful word in any natural
@@ -112,10 +118,42 @@ language.
 
 ### Parameter setting ``c`` ###
 
-The letter ``c`` invokes C++ module TICCL-anahash. This converts the
+The letter ``c`` invokes C++ module ``TICCL-anahash``. This converts the
 cleaned frequency file into the TICCL anagram hash. Can be used in
 conjunction with the letter ``m`` (please, see there) to provide a speedier further
 processing for smaller corpora.  
+
+### Parameter setting ``d`` ###
+
+The letter ``d`` invokes C++ module ``TICCL-indexerNT`` if combined with
+the letter ``n``, C++ module ``TICCL-indexer`` if not. TICCL-indexerNT
+is a multi-threaded implementation of focus word correction candidate
+retrieval. TICCL-indexer is an implementation of character confusion correction candidate
+retrieval. This may be set to work in parallel by also invoking the
+letter ``n``, in which case it will create a temporary directory to
+split the character confusion list in as many parts as you defined the
+number of threads for TICCL to work with in the TICCL configuration
+file.
+
+Note that currently output of ``TICCL-indexer`` on the basis of a
+large corpus may be a very large, uncompressed numerical file.
+
+### Parameter setting ``e`` ###
+
+The letter ``e`` invokes ``TICCL-LDcalc``, which primarily steps back
+to the symbolic representations of the word types, performs some basic
+filtering and gathering of statistics about the word types as well the
+actual character confusions observed between focus words and the
+correction candidates retrieved.
+
+### Parameter setting ``d`` ###
+
+The letter ``d`` invokes ``TICCL-rank``. This C++ module uses a large
+range of features in order to try and rank the correction candidates
+as best as possible.
+
+We have a thorough evaluation of TICCL's ranking on the basis of ablation experiments
+high on our list of todos.
 
 ### Parameter setting ``m`` ###
 
@@ -124,9 +162,9 @@ output the list of word strings that TICCL needs to search correction
 candidates for. This is effected on the basis of the artificial
 frequency we let the system assign to word types that are present in
 the validated lexicon.  This list serves as the focus words list for
-the subsequent module TICCL-indexerNT. For smaller corpora this
+the subsequent module ``TICCL-indexerNT``. For smaller corpora this
 results in less work and therefore shorter running times than when one
-runs TICCL-indexer, which exhaustively gathers all correction
+runs ``TICCL-indexer``, which exhaustively gathers all correction
 candidates for all the words in the cleaned up corpus frequency list,
 i.e. performs character confusion based corpus clean-up.  
 
