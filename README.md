@@ -146,14 +146,20 @@ filtering and gathering of statistics about the word types as well the
 actual character confusions observed between focus words and the
 correction candidates retrieved.
 
-### Parameter setting ``d`` ###
+### Parameter setting ``f`` ###
 
-The letter ``d`` invokes ``TICCL-rank``. This C++ module uses a large
+The letter ``f`` invokes ``TICCL-rank``. This C++ module uses a large
 range of features in order to try and rank the correction candidates
 as best as possible.
 
 We have a thorough evaluation of TICCL's ranking on the basis of ablation experiments
 high on our list of todos.
+
+### Parameter setting ``g`` ###
+
+The letter ``g`` invokes ``FoLiA-correct``. This naturally presupposes
+your texts are in FoLiA XML format. TICCL currently provides no actual
+text correction/editing facilities for formats other than FoLiA XML.
 
 ### Parameter setting ``m`` ###
 
