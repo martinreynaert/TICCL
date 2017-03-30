@@ -23,7 +23,7 @@ from os import uname
 import sys
 REQUIRE_VERSION = 0.9
 
-import os                                                                                                                                                                                                   
+import os
 try:
     language = os.environ['language']
 except:
@@ -46,6 +46,7 @@ hostname = uname()[1]
 if hostname == 'ticclops.uvt.nl' or hostname == 'black.uvt.nl':
     HOST = 'ticclops.uvt.nl'
     BASEDIR = '/exp2/mre/ticclops/'
+    PORT = 443
     if language:
         URLPREFIX = language
         ROOT = '/opensonar/ticclops/' + language
@@ -194,7 +195,7 @@ if language == 'nld':
     ]
 
 ##COPYPART--END
-elif language == 'deu': 
+elif language == 'deu':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>German Language Site</H3><p>This site currently offers a contemporary German lexicons</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -304,7 +305,7 @@ elif language == 'deu':
     ]
 ##COPYPART--END
 ##DEU-FRAK--begin
-elif language == 'deu-frak': 
+elif language == 'deu-frak':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>German (Fraktur) Language Site</H3><p>This site currently offers a recent historic German lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -417,7 +418,7 @@ elif language == 'deu-frak':
 
 ##ELL--begin
 ##COPYPART--BEGIN
-elif language == 'ell': 
+elif language == 'ell':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Greek Site</H3><p>This site currently offers a contemporary Greek lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -511,7 +512,7 @@ elif language == 'ell':
 ##ELL-end
 ##GRC--begin
 ##COPYPART--END
-elif language == 'grc': 
+elif language == 'grc':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Classical Greek Site</H3><p>This site currently offers a Classical Greek lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -603,7 +604,7 @@ elif language == 'grc':
     ]
 ##COPYPART--END
 ##GRC--end
-elif language == 'spa': 
+elif language == 'spa':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Spanish Site</H3><p>This site currently offers a contemporary Spanish lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -702,7 +703,7 @@ elif language == 'spa':
         ),
     ]
 ##SPA_OLD--begin
-elif language == 'spa_old': 
+elif language == 'spa_old':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Spanish (Old) Site</H3><p>This site currently only offers a contemporary Spanish lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -803,7 +804,7 @@ elif language == 'spa_old':
 ##SPA_OLD--end
 ##ENG--begin
 ##COPYPART--END
-elif language == 'eng': 
+elif language == 'eng':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>English Site</H3><p>This site currently offers a contemporary English lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -915,7 +916,7 @@ elif language == 'eng':
 
 ##ITA--begin
 ##COPYPART--END
-elif language == 'ita': 
+elif language == 'ita':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Italian Site</H3><p>This site currently offers a contemporary Italian lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1010,7 +1011,7 @@ elif language == 'ita':
 ##ITA--end
 ##COPYPART--BEGIN
 ##ITA_OLD--begin
-elif language == 'ita_old': 
+elif language == 'ita_old':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Italian (Old) Site</H3><p>This site currently offers only a contemporary Italian lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1106,7 +1107,7 @@ elif language == 'ita_old':
 ##COPYPART--END
 ##LAT-begin
 ##COPYPART--END
-elif language == 'lat': 
+elif language == 'lat':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Latin Site</H3><p>This site currently offers only a historical Latin lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1201,7 +1202,7 @@ elif language == 'lat':
 ##LAT-end
 ##POL--begin
 ##COPYPART--END
-elif language == 'pol': 
+elif language == 'pol':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Polish Site</H3><p>This site currently offers a contemporary Polish lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1295,7 +1296,7 @@ elif language == 'pol':
 ##POL--end
 ##POR--begin
 ##COPYPART--END
-elif language == 'por': 
+elif language == 'por':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Portuguese Site</H3><p>This site currently offers a contemporary Portuguese lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1390,7 +1391,7 @@ elif language == 'por':
 ##POR--end
 ##RUS--begin
 ##COPYPART--END
-elif language == 'rus': 
+elif language == 'rus':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Russian Site</H3><p>This site currently offers a contemporary Russian lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1484,7 +1485,7 @@ elif language == 'rus':
 ##RUS--end
 ##SWE--begin
 ##COPYPART--END
-elif language == 'swe': 
+elif language == 'swe':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Swedish Site</H3><p>This site currently offers a contemporary Swedish lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1578,7 +1579,7 @@ elif language == 'swe':
 ##SWE-end
 ##FIN--begin
 ##COPYPART--BEGIN
-elif language == 'fin': 
+elif language == 'fin':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Finnish Site</H3><p>This site currently offers a contemporary Finnish lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1672,7 +1673,7 @@ elif language == 'fin':
 ##FIN--end
 ##FRA-begin
 ##COPYPART--END
-elif language == 'fra': 
+elif language == 'fra':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>French Site</H3><p>This site currently offers a contemporary French lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
@@ -1775,7 +1776,7 @@ elif language == 'fra':
 ##FRA--end
 ##ISL-begin
 ##COPYPART--END
-elif language == 'isl': 
+elif language == 'isl':
     CUSTOMHTML_INDEX = "<H3><a name=\"documentation\"></a>Icelandic Site</H3><p>This site currently offers a contemporary Icelandic lexicon</p><H3><a name=\"documentation\"></a>@PhilosTEI homepage</H3><a href=\"http://www.axiom.humanities.uva.nl/PhilosTEI.html\" title=\"@PhilosTEI homepage\" id=\"logo\"><img src=\"http://ticclops.uvt.nl/PhilosTEI.jpg\" width=\"30%\" class=\"centeredImage\" background-color= transparent/></a><H3><a name=\"documentation\"></a>TICCLops documentation</H3></h1><p>Users are invited to first take a look at the TICClops User and Demonstrator Documentation, which can be downloaded from <a href=\"http://ticclops.uvt.nl/ticclops_manual.v101.pdf\">the TICCLops website.</a></p>"
 ##COPYPART--BEGIN
 #We put this in a variable because we will use this same input template in TWO profiles.
