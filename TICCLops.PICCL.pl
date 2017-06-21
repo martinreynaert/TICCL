@@ -115,9 +115,9 @@ $hocrdir = $OUTPUTDIR . '/zzz/HOCR/';
 $foliadir = $OUTPUTDIR . '/zzz/FOLIA/';
 print STDERR "OUT2: $out\n";
 
-`mkdir $OUTPUTDIR/zzz/`;
-`mkdir $OUTPUTDIR/zzz/TIFF/`;
-`mkdir $OUTPUTDIR/zzz/TICCL/`;
+`mkdir -p $OUTPUTDIR/zzz/`;
+`mkdir -p $OUTPUTDIR/zzz/TIFF/`;
+`mkdir -p $OUTPUTDIR/zzz/TICCL/`;
 `cp $lex $out.lst`; ##Checken!!
 
 # a : run all with TICCL-indexerNT (+ 'n'). Should then be 'abcdefgn'.
@@ -286,8 +286,8 @@ $document_number = 0;
 $follow = -1;
 ##We next process each document listed in the array in turn
 @coldocs = nsort @coldocs;
-`mkdir $hocrdir`;
-`mkdir $foliadir`;
+`mkdir -p $hocrdir`;
+`mkdir -p $foliadir`;
 foreach $doc (@coldocs) {
     @DOCNAME = split '/', $doc;
     $last = pop @DOCNAME;
@@ -430,10 +430,10 @@ if ($mode =~ /n/){
 $dirsplits = $outdir . '/TMP';
 if (-d "$dirsplits") {
 `rm -r $dirsplits`;
-`mkdir $dirsplits`;
+`mkdir -p $dirsplits`;
 }
 else {
-`mkdir $dirsplits`;
+`mkdir -p $dirsplits`;
 }
 #`touch $nuticclbestand`;
     print LOG "RUNNING ticcl3--PARALLEL\n";
@@ -523,7 +523,7 @@ print STDERR "RUN_TICCL-rank2: $out\n";
 ###LOOP7 - BEGIN
 if ($mode =~ /g/){
     $dirticclcorrect = $OUTPUTDIR . '/zzz/FOLIAcorrect/';
-    `mkdir $dirticclcorrect`;
+    `mkdir -p $dirticclcorrect`;
 ##new, streamlined:
 print STDERR "RUN_FoLiA-correct: $out\n";
 ##Met FoLiA input nu geen folia.xml in outputdir, maar wel in inputdir
