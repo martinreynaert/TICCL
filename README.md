@@ -101,7 +101,7 @@ For FoLiA XML, the C++ ticcltools module ``FoLiA-stats`` is invoked. In fact, th
 module can also provide n-gram lists.
 
 For plain XML or TXT the C++ ticcltools module ``TICCL-stats`` is
-invoked. This is to data less well developed than the FoLiA module.
+invoked. This is to date less well developed than the FoLiA module.
 
 In fact, the module invoked will derive a frequency list for your
 corpus from your input files. This entails that in case you already
